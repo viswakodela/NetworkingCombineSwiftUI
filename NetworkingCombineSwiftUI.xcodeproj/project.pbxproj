@@ -11,6 +11,13 @@
 		18DBD9CC2A8961CA00A10684 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD9CB2A8961CA00A10684 /* ContentView.swift */; };
 		18DBD9CE2A8961CE00A10684 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DBD9CD2A8961CE00A10684 /* Assets.xcassets */; };
 		18DBD9D22A8961CE00A10684 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DBD9D12A8961CE00A10684 /* Preview Assets.xcassets */; };
+		18DBD9DA2A89666B00A10684 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD9D92A89666B00A10684 /* NetworkManager.swift */; };
+		18DBD9DC2A89669300A10684 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD9DB2A89669300A10684 /* HTTPRequest.swift */; };
+		18DBD9DE2A89678500A10684 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD9DD2A89678500A10684 /* NetworkError.swift */; };
+		18DBD9E02A898E1200A10684 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD9DF2A898E1200A10684 /* JSONParameterEncoder.swift */; };
+		18DBD9E22A899A3700A10684 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD9E12A899A3700A10684 /* Result.swift */; };
+		BDD9F7922A89B85400BB777F /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9F7912A89B85400BB777F /* HTTPMethod.swift */; };
+		BDD9F7942A89B88A00BB777F /* HTTPURLResponse+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9F7932A89B88A00BB777F /* HTTPURLResponse+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +27,13 @@
 		18DBD9CD2A8961CE00A10684 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18DBD9CF2A8961CE00A10684 /* NetworkingCombineSwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetworkingCombineSwiftUI.entitlements; sourceTree = "<group>"; };
 		18DBD9D12A8961CE00A10684 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		18DBD9D92A89666B00A10684 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		18DBD9DB2A89669300A10684 /* HTTPRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		18DBD9DD2A89678500A10684 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		18DBD9DF2A898E1200A10684 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		18DBD9E12A899A3700A10684 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		BDD9F7912A89B85400BB777F /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		BDD9F7932A89B88A00BB777F /* HTTPURLResponse+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +66,7 @@
 		18DBD9C82A8961C900A10684 /* NetworkingCombineSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				18DBD9D82A89665600A10684 /* Networking */,
 				18DBD9C92A8961C900A10684 /* NetworkingCombineSwiftUIApp.swift */,
 				18DBD9CB2A8961CA00A10684 /* ContentView.swift */,
 				18DBD9CD2A8961CE00A10684 /* Assets.xcassets */,
@@ -67,6 +82,20 @@
 				18DBD9D12A8961CE00A10684 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		18DBD9D82A89665600A10684 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				18DBD9D92A89666B00A10684 /* NetworkManager.swift */,
+				18DBD9DB2A89669300A10684 /* HTTPRequest.swift */,
+				BDD9F7912A89B85400BB777F /* HTTPMethod.swift */,
+				BDD9F7932A89B88A00BB777F /* HTTPURLResponse+Ext.swift */,
+				18DBD9DD2A89678500A10684 /* NetworkError.swift */,
+				18DBD9DF2A898E1200A10684 /* JSONParameterEncoder.swift */,
+				18DBD9E12A899A3700A10684 /* Result.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +168,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DBD9DA2A89666B00A10684 /* NetworkManager.swift in Sources */,
 				18DBD9CC2A8961CA00A10684 /* ContentView.swift in Sources */,
+				18DBD9E02A898E1200A10684 /* JSONParameterEncoder.swift in Sources */,
+				18DBD9DC2A89669300A10684 /* HTTPRequest.swift in Sources */,
+				BDD9F7922A89B85400BB777F /* HTTPMethod.swift in Sources */,
+				BDD9F7942A89B88A00BB777F /* HTTPURLResponse+Ext.swift in Sources */,
+				18DBD9E22A899A3700A10684 /* Result.swift in Sources */,
 				18DBD9CA2A8961CA00A10684 /* NetworkingCombineSwiftUIApp.swift in Sources */,
+				18DBD9DE2A89678500A10684 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NetworkingCombineSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = 5G446VWAP9;
+				DEVELOPMENT_TEAM = SFNG7GVEK8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -303,7 +339,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NetworkingCombineSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = 5G446VWAP9;
+				DEVELOPMENT_TEAM = SFNG7GVEK8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
