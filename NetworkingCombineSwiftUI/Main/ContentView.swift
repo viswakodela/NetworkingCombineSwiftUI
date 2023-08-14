@@ -35,15 +35,15 @@ class ViewModel: ObservableObject {
 struct ContentView: View {
     @StateObject var viewModel = ViewModel()
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
-        .onTapGesture {
-            viewModel.fetchSearchResults()
+        TabView {
+            MoviesView()
+                .tabItem {
+                    Label("Movies", systemImage: "play.tv.fill")
+                }
+            PodcastsView()
+                .tabItem {
+                    Label("Podcasts", systemImage: "beats.headphones")
+                }
         }
     }
 }
