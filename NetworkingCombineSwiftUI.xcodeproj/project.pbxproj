@@ -22,6 +22,9 @@
 		BDD9F7A32A89CD5700BB777F /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9F7A22A89CD5700BB777F /* MoviesViewModel.swift */; };
 		BDD9F7A62A89CE2C00BB777F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9F7A52A89CE2C00BB777F /* Movie.swift */; };
 		BDD9F7A82A89CE5300BB777F /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9F7A72A89CE5300BB777F /* SearchResult.swift */; };
+		BDD9F7AC2A89DBD100BB777F /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9F7AB2A89DBD100BB777F /* ImageCache.swift */; };
+		BDD9F7AE2A89DC6600BB777F /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9F7AD2A89DC6600BB777F /* ImageModel.swift */; };
+		BDD9F7B02A89DC9000BB777F /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9F7AF2A89DC9000BB777F /* RemoteImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		BDD9F7A22A89CD5700BB777F /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		BDD9F7A52A89CE2C00BB777F /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		BDD9F7A72A89CE5300BB777F /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		BDD9F7AB2A89DBD100BB777F /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		BDD9F7AD2A89DC6600BB777F /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		BDD9F7AF2A89DC9000BB777F /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 		18DBD9C82A8961C900A10684 /* NetworkingCombineSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				BDD9F7AA2A89DBB500BB777F /* RemoteImageView */,
 				BDD9F7962A89C73C00BB777F /* Movies */,
 				BDD9F7972A89C74600BB777F /* Podcasts */,
 				BDD9F7952A89C6B400BB777F /* Main */,
@@ -158,6 +165,16 @@
 			path = ReusableViews;
 			sourceTree = "<group>";
 		};
+		BDD9F7AA2A89DBB500BB777F /* RemoteImageView */ = {
+			isa = PBXGroup;
+			children = (
+				BDD9F7AB2A89DBD100BB777F /* ImageCache.swift */,
+				BDD9F7AD2A89DC6600BB777F /* ImageModel.swift */,
+				BDD9F7AF2A89DC9000BB777F /* RemoteImageView.swift */,
+			);
+			path = RemoteImageView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -229,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DBD9DA2A89666B00A10684 /* NetworkManager.swift in Sources */,
+				BDD9F7AE2A89DC6600BB777F /* ImageModel.swift in Sources */,
 				18DBD9CC2A8961CA00A10684 /* ContentView.swift in Sources */,
 				18DBD9E02A898E1200A10684 /* JSONParameterEncoder.swift in Sources */,
 				18DBD9DC2A89669300A10684 /* HTTPRequest.swift in Sources */,
@@ -237,9 +255,11 @@
 				BDD9F7942A89B88A00BB777F /* HTTPURLResponse+Ext.swift in Sources */,
 				BDD9F7A32A89CD5700BB777F /* MoviesViewModel.swift in Sources */,
 				BDD9F7A82A89CE5300BB777F /* SearchResult.swift in Sources */,
+				BDD9F7B02A89DC9000BB777F /* RemoteImageView.swift in Sources */,
 				BDD9F7A62A89CE2C00BB777F /* Movie.swift in Sources */,
 				BDD9F79E2A89C7AB00BB777F /* PodcastsView.swift in Sources */,
 				18DBD9CA2A8961CA00A10684 /* NetworkingCombineSwiftUIApp.swift in Sources */,
+				BDD9F7AC2A89DBD100BB777F /* ImageCache.swift in Sources */,
 				18DBD9DE2A89678500A10684 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,7 +404,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.viswakodela.NetworkingCombineSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.viswakodela.NetworkingCombineSwiftUI.ca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -422,7 +442,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.viswakodela.NetworkingCombineSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.viswakodela.NetworkingCombineSwiftUI.ca;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";

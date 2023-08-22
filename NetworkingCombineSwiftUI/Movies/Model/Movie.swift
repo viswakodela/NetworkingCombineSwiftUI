@@ -8,7 +8,9 @@
 import Foundation
 
 struct Movie: Codable, Identifiable {
-    let id: UUID = UUID()
+    var id: String {
+        return trackName + primaryGenreName
+    }
     let trackName: String
     var artworkUrl100: String?
     let artistName: String?

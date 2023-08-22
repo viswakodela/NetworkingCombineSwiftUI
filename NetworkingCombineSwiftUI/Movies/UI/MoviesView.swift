@@ -13,9 +13,20 @@ struct MoviesView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(viewModel.searchResults, id: \.id) { item in
-                    Text(item.trackName)
+            if viewModel.searchResults.isEmpty {
+                Text("Search for Movie")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.secondary)
+            } else {
+                List {
+                    ForEach(viewModel.searchResults, id: \.id) { item in
+                        HStack {
+                            RemoteImageView(stringURL: item.artworkUrl100 ?? "")
+                                .scaledToFit()
+                            Text(item.trackName)
+                        }
+                    }
                 }
             }
         }
